@@ -8,6 +8,7 @@ class Car(var name: String, var model: String, var color: String, var tires: Int
 
     var seaters = seaters.uppercase();//assign this property using a parameter that is to be modified
     var country: String
+    var usage = 14;
 
     //using the initialization block.
     init {
@@ -30,6 +31,8 @@ class Car(var name: String, var model: String, var color: String, var tires: Int
                     "very durable and affordable"
         )
     }
+
+    fun getCarUsage() = usage - 4;//functions can be expressed in this form too
 
 }
 

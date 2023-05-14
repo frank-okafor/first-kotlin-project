@@ -40,10 +40,21 @@ class ArrayTest {
         val subList = arrayList.subList(1, 3);
         println("sublist value: $subList")
     }
+
+    fun reverseArray(numberList: List<Int>) {
+        println("\n")
+        var result = arrayListOf<Int>();
+        for (i in numberList.size - 1 downTo 0) {
+            result.add(numberList.get(i));
+        }
+        println("reversed list: $result")
+    }
 }
 
 fun main() {
     val test = ArrayTest();
     test.addAges();
     test.findMaxNumberInArray(arrayOf(1, 3, 7, 89, 43, 2));
+
+    test.reverseArray(listOf(1, 2, 3, 4, 5, 6, 7));
 }
